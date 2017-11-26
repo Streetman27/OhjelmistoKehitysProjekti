@@ -1,4 +1,4 @@
-package fi.swd.Bookstore.domain;
+package fi.swd.Candystore.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-public class Book {
+public class Candy {
 	
 	@JsonIgnore
 	@Id
@@ -21,11 +21,11 @@ public class Book {
 	private Double price;
 	
 	
-	public Book() {
+	public Candy() {
 		super();
 	}
 	
-	public Book(String title, String author, String year, String isbn) {
+	public Candy(String title, String author, String year, String isbn) {
 		super();
 		this.title = title;
 		this.author = author;

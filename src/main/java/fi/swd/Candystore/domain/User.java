@@ -1,4 +1,4 @@
-package fi.swd.Bookstore.domain;
+package fi.swd.Candystore.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

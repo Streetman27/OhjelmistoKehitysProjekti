@@ -1,4 +1,4 @@
-package fi.swd.Bookstore.web;
+package fi.swd.Candystore.web;
 
 import java.util.List;
 
@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import fi.swd.Bookstore.domain.Book;
-import fi.swd.Bookstore.domain.BookRepository;
+import fi.swd.Candystore.domain.Candy;
+import fi.swd.Candystore.domain.CandyRepository;
 
 @Controller
-public class BookController {
+public class CandyController {
 
 	@Autowired
-	private BookRepository repository;
+	private CandyRepository repository;
 
 	@RequestMapping(value = "/login")
 	public String login() {
@@ -34,12 +34,12 @@ public class BookController {
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String add(Model model) {
 
-		model.addAttribute("book", new Book());
+		model.addAttribute("book", new Candy());
 		return "addbook";
 	}
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String save(Book book) {
+	public String save(Candy book) {
 		repository.save(book);
 		return "redirect:/booklist";
 	}
@@ -52,13 +52,13 @@ public class BookController {
 
 	// JSON findAll
 	@RequestMapping(value = "/books", method = RequestMethod.GET)
-	public @ResponseBody List<Book> bookListRest() {
-		return (List<Book>) repository.findAll();
+	public @ResponseBody List<Candy> bookListRest() {
+		return (List<Candy>) repository.findAll();
 	}
 
 	// JSON findOne
 	@RequestMapping(value = "/book/{id}", method = RequestMethod.GET)
-	public @ResponseBody Book findBookRest(@PathVariable("id") long bookId) {
+	public @ResponseBody Candy findBookRest(@PathVariable("id") long bookId) {
 		return repository.findOne(bookId);
 	}
 	

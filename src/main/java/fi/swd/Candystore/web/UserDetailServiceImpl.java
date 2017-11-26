@@ -1,4 +1,4 @@
-package fi.swd.Bookstore.web;
+package fi.swd.Candystore.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import fi.swd.Bookstore.domain.User;
-import fi.swd.Bookstore.domain.UserRepository;
+import fi.swd.Candystore.domain.User;
+import fi.swd.Candystore.domain.UserRepository;
 
 /**
  * This class is used by spring security to authenticate and authorize user
