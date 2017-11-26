@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<title>BookStore</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="col-md-4">
+		<h1>Books</h1>
+		<br></br>
+	</div>
+	<div class="col-md-4">
+		<h3 style="font-style:italic" th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
+	</div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Author</th>
+				<th>Title</th>
+				<th>ISBN</th>
+				<th>Year</th>
+				<!-- hasRole('') / hasAuthority('') --> 
+				<!-- hasRole -> InMemory -->
+				<!-- hasAuthority -> User entities -->
+				<th sec:authorize="hasAuthority('ADMIN')"></th>	
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="book : ${books}">
+				<td th:text="${book.author}"></td>
+				<td th:text="${book.title}"></td>
+				<td th:text="${book.isbn}"></td>
+				<td th:text="${book.year}"></td>
+				<!-- hasRole('') / hasAuthority('') -->
+				<td sec:authorize="hasAuthority('ADMIN')"><a class="btn btn-danger" th:href="@{/delete/{id}(id=${book.id})}">Delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="col-md-4" style="padding:20px 0">
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Sign Out" class="btn btn-danger"/>
+		</form>
+	</div>
+	<a class="btn btn-success" href="/add">Add Book</a>
+</body>
+</html>
