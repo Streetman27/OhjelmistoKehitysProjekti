@@ -14,10 +14,10 @@ public class Candy {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	private String title;
+	private String product;
 	private String author;
-	private String year;
-	private String isbn;
+	private String expiration;
+	private String store;
 	private Double price;
 	
 	
@@ -25,12 +25,13 @@ public class Candy {
 		super();
 	}
 	
-	public Candy(String title, String author, String year, String isbn) {
+	public Candy(String title, String author, String year, String isbn, Double price) {
 		super();
-		this.title = title;
+		this.product = title;
 		this.author = author;
-		this.year = year;
-		this.isbn = isbn;
+		this.expiration = year;
+		this.store = isbn;
+		this.price = price;
 	}
 
 	public long getId() {

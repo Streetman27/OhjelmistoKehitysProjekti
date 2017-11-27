@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>fi.swd</groupId>
-	<artifactId>Bookstore</artifactId>
+	<artifactId>Candystore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Bookstore</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Candystore</name>
+	<description>CandyProject for adding different candies</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
