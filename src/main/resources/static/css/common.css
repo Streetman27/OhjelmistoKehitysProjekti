@@ -1,0 +1,9 @@
+.panel-default {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.panel-default .btn {
+   margin-top: 1em;
+}

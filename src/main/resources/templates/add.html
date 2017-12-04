@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Handling Form Submission</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+</head>
+<body>
+	<h1>Add product</h1>
+	<form th:object="${product}" th:action="@{/save}" action="#" method="post">
+	<input type="text" th:field="*{tuote}"/>
+	<input type="text" th:field="*{lisatiedot}"/>
+	<input type="number" th:field="*{maara}"/>
+	<input type="submit" class="btn btn-success" value="save"></input>
+	</form>
+	<br></br>
+	<br></br>
+		<a class="btn btn-success" href="/ostoslista">Back</a>
+</body>
+</html>

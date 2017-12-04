@@ -27,7 +27,7 @@ public class ListaController {
 	@RequestMapping(value = "/ostoslista", method = RequestMethod.GET)
 	public String listForm(Model model) {
 
-		model.addAttribute("list", repository.findAll());
+		model.addAttribute("products", repository.findAll());
 		return "ostoslista";
 	}	
 	
@@ -39,7 +39,7 @@ public class ListaController {
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String add(Model model) {
 
-		model.addAttribute("tuote", new Product());
+		model.addAttribute("product", new Product());
 		return "add";
 	}
 
@@ -49,9 +49,9 @@ public class ListaController {
 		return "redirect:/ostoslista";
 	}
 	
-	@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-	public String edit(@PathVariable("id") long tuoteId) {
-		repository.findOne(tuoteId);
+	@RequestMapping(value = "/edit/{id}")
+	public String edit(@PathVariable("id") Long tuoteId, Model model) {
+		model.addAttribute("product", repository.findOne(tuoteId));
 		return "/edit";
 	}
 
