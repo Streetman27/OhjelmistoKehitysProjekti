@@ -23,7 +23,7 @@ public class ListaController {
 	public String login() {
 		return "login";
 	} 
-
+	
 	@RequestMapping(value = "/ostoslista", method = RequestMethod.GET)
 	public String listForm(Model model) {
 
@@ -31,9 +31,14 @@ public class ListaController {
 		return "ostoslista";
 	}	
 	
-    @RequestMapping(value = "/")
+	@RequestMapping(value = "/index")
     public String index() {
         return "index";
+    }
+	
+    @RequestMapping(value = "/")
+    public String welcome() {
+    	return "welcome";
     }
 	
 	@RequestMapping(value = "/add", method = RequestMethod.GET)

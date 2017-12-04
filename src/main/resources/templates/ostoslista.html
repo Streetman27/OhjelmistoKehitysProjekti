@@ -22,6 +22,7 @@
 				<!-- hasRole('') / hasAuthority('') --> 
 				<!-- hasRole -> InMemory -->
 				<!-- hasAuthority -> User entities -->
+				<th sec:authorize="hasAuthority('ADMIN')"></th>
 				<th sec:authorize="hasAuthority('ADMIN')"></th>	
 			</tr>
 		</thead>
