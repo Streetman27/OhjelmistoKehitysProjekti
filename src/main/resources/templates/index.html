@@ -11,13 +11,11 @@
 <body>
 		
     <div class='container'>
-	    
+	    <div class="test">
     	<h3 style="font-style:italic" th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
-    	<div class="col-md-4" style="padding:20px 0">
-			<form th:action="@{/logout}" method="post">
-				<input type="submit" value="Sign Out"/>
-			</form>
+		<a href="/logout" class="btn btn-primary signout">Sign Out</a>
 		</div>
+		<div class="clear"></div>
         <div id='root'></div>
     
         

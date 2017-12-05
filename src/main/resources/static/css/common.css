@@ -6,10 +6,32 @@
 
 .panel-default .btn {
    margin-top: 1em;
+   width: 8em;s
 }
 
 h3 {
 	float: left;
-	text-align:
+	color: aqua;
 	width: 66%;
+}
+
+.clear {clear:both;}
+
+.signout {
+	float: right;
+    margin-top: 5px;
+} 
+
+.container {
+    background-color: black;
+    padding-bottom: 5em;
+    border-radius: 5px;	
+}
+
+body {
+	background-color: #303030;
+}
+
+table {
+    background-color: lightgray;
 }

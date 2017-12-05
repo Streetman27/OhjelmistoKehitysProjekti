@@ -209,16 +209,16 @@ class  App extends React.Component {
 		                <div className="panel-heading">Edit productlist</div>
 		                <div className="panel-body">
 		                <form className="form-inline">
-		                    <div className="col-md-2">
+		                    <div>
 		                        <input type="text" placeholder="Tuote" className="form-control"  name="tuote" value={this.state.tuote} onChange={this.handleChange} required/>    
 		                    </div>
-		                    <div className="col-md-2">       
+		                    <div>       
 		                        <input type="text" placeholder="Lisätiedot" className="form-control" name="lisatiedot" value={this.state.lisatiedot} onChange={this.handleChange} required/>
 		                    </div>
-		                    <div className="col-md-2">
+		                    <div>
 		                        <input type="number" placeholder="Määrä" className="form-control" name="maara" value={this.state.maara} onChange={this.handleChange} required/>
 		                    </div>
-		                    <div className="col-md-2">
+		                    <div>
 		                        <button className="btn btn-success" onClick={this.handleSubmit}>Save</button>   
 		                    </div>        
 		                </form>
@@ -258,16 +258,16 @@ class  App extends React.Component {
 		                <div className="panel-heading">Luo ruokalista</div>
 		                <div className="panel-body">
 		                <form className="form-inline">
-		                    <div className="col-md-2">
+		                    <div>
 		                        <input type="text" placeholder="Tuote" className="form-control"  name="tuote" onChange={this.handleChange} required/>    
 		                    </div>
-		                    <div className="col-md-2">       
+		                    <div>       
 		                        <input type="text" placeholder="Lisätiedot" className="form-control" name="lisatiedot" onChange={this.handleChange} required/>
 		                    </div>
-		                    <div className="col-md-2">
+		                    <div>
 		                        <input type="number" placeholder="Määrä" className="form-control" name="maara" onChange={this.handleChange} required/>
 		                    </div>
-		                    <div className="col-md-2">
+		                    <div>
 		                        <button className="btn btn-success" onClick={this.handleSubmit}>Save</button>   
 		                    </div>        
 		                </form>
