@@ -13,7 +13,8 @@
     <div class='container'>
 	    <div class="test">
     	<h3 style="font-style:italic" th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
-		<a href="/logout" class="btn btn-primary signout">Sign Out</a>
+		<a href="/" class="btn btn-primary btn-sm signout">Back to Menu</a>
+		<a href="/logout" class="btn btn-warning btn-sm signout">Sign Out</a>
 		</div>
 		<div class="clear"></div>
         <div id='root'></div>

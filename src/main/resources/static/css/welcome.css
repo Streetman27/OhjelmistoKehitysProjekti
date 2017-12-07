@@ -1,13 +1,17 @@
 .keskitys {
-    height: 200px;
-    width: 400px;
-
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -200px;
+	height: 200px;
+	width: 400px;
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
 }
 
-.keskitys a {margin-right:5em;}
-.keskitys a:last-child {margin-right:0em;}
+.keskitys a {
+	margin-right: 5em;
+}
+
+.keskitys a:last-child {
+	margin-right: 0em;
+}

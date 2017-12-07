@@ -4,15 +4,20 @@
 <title>Productlist</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/ostoslista.css" />
 </head>
 <body>
+	<a href="/" class="btn btn-primary log">Back to Menu</a>	
+	
 	<div class="col-md-4">
 		<h1>Product list</h1>
 		<br></br>
 	</div>
+	
 	<div class="col-md-4">
 		<h3 style="font-style:italic" th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
 	</div>
+	
 	<table class="table table-striped">
 		<thead>
 			<tr>
@@ -26,6 +31,7 @@
 				<th sec:authorize="hasAuthority('ADMIN')"></th>	
 			</tr>
 		</thead>
+		
 		<tbody>
 			<tr th:each="product : ${products}">
 				<td th:text="${product.tuote}"></td>
@@ -37,11 +43,13 @@
 			</tr>
 		</tbody>
 	</table>
+	
+	<a sec:authorize="hasAuthority('ADMIN')" class="btn btn-success" href="/add">Add Product</a>
 	<div class="col-md-4" style="padding:20px 0">
 		<form th:action="@{/logout}" method="post">
 			<input type="submit" value="Sign Out" class="btn btn-danger"/>
 		</form>
 	</div>
-	<a class="btn btn-success" href="/add">Add Book</a>
+	
 </body>
 </html>

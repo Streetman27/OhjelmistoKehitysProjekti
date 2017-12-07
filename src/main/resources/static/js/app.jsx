@@ -206,7 +206,7 @@ class  App extends React.Component {
 		    render() {
 		        return (
 		            <div className="panel panel-default">
-		                <div className="panel-heading">Edit productlist</div>
+		                <div className="panel-heading">Muokkaa ruokalista</div>
 		                <div className="panel-body">
 		                <form className="form-inline">
 		                    <div>
