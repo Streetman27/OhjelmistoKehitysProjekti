@@ -1,4 +1,4 @@
-package fi.swd.Candystore;
+package fi.swd.Ostoslista;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CandystoreApplicationTests {
+public class OstoslistaApplicationTests {
 
 	@Test
 	public void contextLoads() {
