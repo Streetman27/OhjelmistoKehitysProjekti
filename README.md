@@ -6,13 +6,6 @@ Molemmissa sivuissa on luotu lista, johon voi lisätä tuotteita, mitä haluaisi
 
 Thymeleaf versiossa admin pystyy luomaan ja editoimaan listan ja käyttäjä voi katsella niitä. React sivussa sekä admin, että käyttäjä voi katsella, luoda ja muokata listan.
 
-
-Tunnusmalli:
-
-Käyttäjätunnus
-salis
-
-
 Käyttäjätunnukset ovat:
 
 admin
